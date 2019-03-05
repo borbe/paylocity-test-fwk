@@ -20,6 +20,8 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
   async onPrepare() {
+    browser.ignoreSynchronization = true;
+    browser.resetUrl = 'file://';
   // eslint-disable-next-line global-require
     require('babel-register');
     await gatherPageObjects();
@@ -43,7 +45,7 @@ exports.config = {
       pageTitle: 'Paylocity - Automated Test Report',
       reportName: 'Paylocity Challenge - Automated Test Report',
       pageFooter: `<div align="center">
-                       <p class="text-align-center">Powered by Paylocity &nbsp; &nbsp;</p>
+                       <p class="text-align-center">by Jorge Lopez for Paylocity &nbsp; &nbsp;</p>
                    </div>`,
       customData: {
         title: 'Execution Details',

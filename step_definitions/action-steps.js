@@ -10,7 +10,7 @@ Given(/^user clicks on the "([^"]*)" element containing "([^"]*)" text$/, async 
 });
 
 Given(/^user goes to "(.*)" page$/, async (url) => {
-  await browser.get(process.env.URL + url);
+  await browser.get(url);
 });
 
 Given(/^user enters "(.*)" into the "(.*)" field$/, async (text, textField) => {
