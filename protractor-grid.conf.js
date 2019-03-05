@@ -31,8 +31,7 @@ exports.config = {
       'Step-definitions/*.js',
       'Hooks/*.js',
     ],
-    format: `json:./reports/cucumber.${process.pid}.json`,
-    tags,
+    format: `json:./reports/cucumber.${process.pid}.json`
   },
   plugins: [{
     package: 'protractor-multiple-cucumber-html-reporter-plugin',
