@@ -14,7 +14,6 @@ exports.config = {
     browserName: process.env.BROWSER,
     shardTestFiles: (process.env.BROWSER_INSTANCES > 1),
     maxInstances: process.env.BROWSER_INSTANCES,
-    screenResolution: screenRes,
   },
   ignoreUncaughtExceptions: true,
   baseUrl: process.env.URL,
