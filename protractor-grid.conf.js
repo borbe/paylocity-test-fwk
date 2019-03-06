@@ -22,7 +22,7 @@ exports.config = {
   async onPrepare() {
     browser.ignoreSynchronization = true;
     browser.resetUrl = 'file://';
-  // eslint-disable-next-line global-require
+    // eslint-disable-next-line global-require
     require('babel-register');
     await gatherPageObjects();
   },
@@ -33,7 +33,7 @@ exports.config = {
       'Step-definitions/*.js',
       'Hooks/*.js',
     ],
-    format: `json:./reports/cucumber.${process.pid}.json`
+    format: `json:./reports/cucumber.${process.pid}.json`,
   },
   plugins: [{
     package: 'protractor-multiple-cucumber-html-reporter-plugin',
