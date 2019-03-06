@@ -14,11 +14,12 @@ After(async function (scenario) {
   }
 });
 
-Before(async () => {
+Before(async (scenario) => {
   const dir = `${__dirname}/../../../node-storage`;
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
+  global.localStorage = new LocalStorage(`${dir}/${scenario.pickle.name}`);
 
   setDefaultTimeout(60000);
   browser.manage().timeouts().setScriptTimeout(60000);
