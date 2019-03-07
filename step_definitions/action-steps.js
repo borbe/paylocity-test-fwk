@@ -16,7 +16,7 @@ Given(/^user goes to "(.*)" page$/, async (url) => {
 Given(/^user enters "(.*)" into the "(.*)" field$/, async (text, textField) => {
   const fieldID = textField.replace(/ /g, '_').toUpperCase();
   await pageMap[global.pageID][fieldID].clear();
-  global.localStorage.setItem(textField.toUpperCase(), text);
+  global.localStorage.setItem(textField.replace(/ /g, '_').toUpperCase(), text);
   await pageMap[global.pageID][fieldID].sendKeys(text);
 });
 
