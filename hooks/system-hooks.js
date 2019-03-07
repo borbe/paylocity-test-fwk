@@ -23,5 +23,4 @@ Before(async (scenario) => {
 
   setDefaultTimeout(60000);
   browser.manage().timeouts().setScriptTimeout(60000);
-  browser.manage().window().maximize();
 });
